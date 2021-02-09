@@ -39,7 +39,7 @@ object TasksRemoteDataSource : TasksDataSource {
         addTask("Finish bridge in Tacoma", "Found awesome girders at half the cost!")
     }
 
-    private val observableTasks = MutableLiveData<Result<List<Task>>>()
+    val observableTasks = MutableLiveData<Result<List<Task>>>()
 
     override suspend fun refreshTasks() {
         observableTasks.value = getTasks()
