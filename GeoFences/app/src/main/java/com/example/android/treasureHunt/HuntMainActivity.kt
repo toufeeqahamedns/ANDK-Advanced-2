@@ -91,10 +91,10 @@ class HuntMainActivity : AppCompatActivity() {
     }
 
     /*
- *  When we get the result from asking the user to turn on device location, we call
- *  checkDeviceLocationSettingsAndStartGeofence again to make sure it's actually on, but
- *  we don't resolve the check to keep the user from seeing an endless loop.
- */
+     *  When we get the result from asking the user to turn on device location, we call
+     *  checkDeviceLocationSettingsAndStartGeofence again to make sure it's actually on, but
+     *  we don't resolve the check to keep the user from seeing an endless loop.
+     */
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == REQUEST_TURN_DEVICE_LOCATION_ON) {
